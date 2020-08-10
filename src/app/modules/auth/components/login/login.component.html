@@ -1,0 +1,36 @@
+<mat-toolbar  class="login-header">
+    <mat-card-title class="re-furniture-font">Logo Here</mat-card-title>
+    <span class="nav-tool-items" fxLayout ="row" fxLayoutAlign="center center">
+      <!-- <h3> <img src="assets\img\angular.jpg" style="width: 50px; height: 50px;"></h3> -->
+      <h3 class="re-furniture-font" >Re-Furniture by Rexhina</h3>
+    </span>
+</mat-toolbar>
+<div class=" login-body login-wrapper" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="login-mat-card">
+        <mat-card-header class="mb-4">
+            <mat-card-title>Welcome!</mat-card-title>
+        </mat-card-header>
+      
+        <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <input type="text" id="username" class="input" placeholder="Enter your username" formControlName="username" required matInput> 
+                    <mat-error *ngIf="loginForm.hasError('required','username')">
+                        Username is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+               <mat-form-field class="example-full-width">
+                <input type="password" id="password" class="input" placeholder="Enter your password" formControlName="password" required matInput>    
+                <mat-error *ngIf="loginForm.hasError('required','password')">
+                    Password is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </mat-card-content>
+            <button mat-stroked-button  class="btn-block"><b>LOGIN</b></button>
+          </form>
+    </mat-card>
+    <!-- <div class="mt-2" fxLayoutAlign="center center">
+        <div><p>Made with ❤ by Digital Channels</p></div>
+    </div> -->
+</div>
+

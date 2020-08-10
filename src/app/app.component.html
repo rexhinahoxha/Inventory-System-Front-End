@@ -1,0 +1,19 @@
+<div class="logo-header">
+  <img src="./assets/images/logo1.jpg"
+       class="img-responsive center-block"
+       style="max-height:100px;padding-bottom:30px"/>
+</div>
+<nav class='navbar navbar-expand navbar-light bg-light'>
+<!--   <a class='navbar-brand'>{{pageTitle}}</a>-->
+ <ul class='nav nav-pills'>
+    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a></li>
+    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/products']">Product List</a></li>
+    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/sales']">Sales</a></li>
+    <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/reports']">Reports</a></li>
+  </ul>
+</nav>
+<div class='container'>
+<router-outlet></router-outlet>
+</div>
+
+
